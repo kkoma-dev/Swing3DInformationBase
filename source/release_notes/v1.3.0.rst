@@ -1,0 +1,79 @@
+API Improvements
+-----------------
+- Improved 3D Scan speed
+    Optimized the ``Capture3D()`` function to improve 3D scan speed. Based on the default setting of Exposure Time (467),
+    3D scans now complete in less than a second.
+
+    .. note::
+        The 3D Scan speed depends on the set ``Exposure Time``.
+
+- Troubleshooting unexpected outages while using the API
+    Handled a number of exceptions that can occur while using the API, resolving the issue of unexpected hangs.
+    This has greatly improved the overall reliability of the API.
+
+- Rename ``findPatternTransform()`` to ``CalculateTransformMatrixFromChessPattern()``
+    Renamed the ``findPatternTransform()`` function to ``CalculateTransformMatrixFromChessPattern()``.
+    This change more clearly reflects the function's functionality
+    and makes it easier for users to understand its purpose.
+
+- Separate into functional classes and namespaces
+    To improve code structure, we've made features into classes and separated them into associated namespaces. The main classes and namespaces are as follows
+
+    - DeviceInfo
+        - ModelName
+        - VendorName
+        - ManufacturerInfo
+        - FirmwareVersion
+        - MCUFirmwareVersion
+        - Temperature
+
+    - NetworkSettings
+        - MACAddress
+        - CurrentIPConfiguration(DHCP/Static)
+        - CurrentIPAddress
+        - CurrentSubnetMask
+        - CurrentDefaultGateway
+        - PersistentIPAddress
+        - PersistentSubnetMask
+        - PersistentDefaultGateway
+
+    - DeviceSettings
+        - OutputMode(None/2D/3D)
+        - ExposureTime
+        - PeakThreshold
+        - LaserPower
+        - LaserState(On/Off)
+
+
+API New Features
+----------------
+- Added ``SetOutputMode()`` function
+    Added the function to set the output mode (2D/3D).
+    This function replaces the ``Initialize2DConfig()`` and ``Initialize3DConfig()`` functions.
+
+    .. note::
+        When setting the Output Mode, settings saved via ``SaveDeviceSettings()`` are loaded with
+        those values if they exist, otherwise the default settings are applied.
+
+- Added ``GetOutputMode()`` function
+    Added the function to check the current output mode.
+
+- Added ``SaveDeviceSettings()`` and ``LoadDeviceSettings()`` functions
+    Added the ability to save and load DeviceSettings (Exposure Time, Peak Threshold, Laser Power).
+    Settings are saved based on the current output mode (2D/3D) of swing3D.
+
+- Added ``GenerateZMap()`` function
+    Added the function to the ``PointCloud`` class to generate 2D Z maps of different resolutions based on a point cloud.
+
+- Added ``IsConnected()`` function
+    Added the function to check whether swing3D is connected or not.
+
+- Added ``UpdateFirmware()`` function
+    Added the function to update swing3D's firmware.
+
+- Added ``SetDeviceDisconnectEventCallback()`` function
+    Added the function to set a callback function to act when a swing3D is disconnected.
+
+- Added ``CreateTransformMatrix()`` function
+    Added the function to compute a transform matrix that aligns a plane defined by three 3D points to the z-axis.
+
