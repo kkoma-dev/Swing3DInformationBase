@@ -1,0 +1,52 @@
+API Improvements
+----------------
+- Added meta-information to API DLL files.
+    Meta-information including file name, file version, product name, product version, and copyright has been added to
+    the API DLL files. This enhancement improves the management of API DLL files.
+
+
+API New Features
+----------------
+- Added ``DeviceInfo::SerialNumber`` class.
+    Available to retrieve the serial number of the connected Swing3D using ``DeviceInfo::SerialNumber``.
+
+- Added Laser Interlock feature.
+    The laser can now be forcibly turned off using external signals.
+
+- Added ``Login()`` function.
+    After connecting to Swing3D, authentication is required through the ``Login()`` function to control laser power.
+
+
+Studio Improvements
+-------------------
+- Improved UI/UX of Studio.
+    The user interface and user experience (UI/UX) of Studio have undergone significant enhancements.
+    This includes refined layout designs, and optimized user interactions.
+
+- Enhanced Point Cloud display time after 3D scan completion.
+    Significant enhancements have been made to the time it takes for Point Cloud data to be displayed
+    in Studio after the completion of a 3D scan. The display time has been improved from the previous 1.5 seconds to
+    an impressive 0.05 seconds, allowing users to view their data much more quickly.
+
+- Chess Pattern configuration settings now stored using QSettings (registry-based).
+    The method of storing Chess Pattern configuration settings has been upgraded to utilize QSettings,
+    which provides a more robust and reliable solution.
+
+
+Studio New Features
+--------------------
+- Added Continuous capture feature.
+    Capture 2D/3D at desired intervals.
+
+- Added Point Picking feature.
+    Click on the measured Point Cloud to retrieve the coordinates of the point.
+
+- Added network configuration feature.
+    Now, modifying the network settings of the connected Swing3D is possible.
+
+- Added feature to load the current attribute value on Swing3D when clicking on a label.
+    Clicking on a label of an attribute now retrieves the current value set on the Swing3D.
+
+- Added event callbacks for abnormally disconnected from Swing3D.
+    Displays a notification dialog when the connection to Swing3D is abnormally disconnected to alert the user.
+

@@ -1,0 +1,15 @@
+API Fixed Issues
+----------------
+- Fixed an issue where the connection failed when multiple network adapters are present.
+
+
+API New Features
+---------------------
+- Added ``Reboot()`` function
+    Added the function to reboot Swing3D to software.
+
+
+Studio Improvements
+---------------------
+- The Firmware Update ProgressBar Dialog has been modified to not close on key events (ESC, Enter) or the Close button during updates.
+
