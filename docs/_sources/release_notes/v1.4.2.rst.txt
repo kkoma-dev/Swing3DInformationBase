@@ -1,0 +1,19 @@
+API Fixed Issues
+----------------
+- Resolved a conflict between winerror.h and the Swing3D API's ErrorType.
+    To avoid conflicts with `ERROR_DEVICE_NOT_CONNECTED` in winerror.h,
+    prefixed all ErrCodes in the Swing3D API with `SWING3D_`.
+
+
+API New Features
+---------------------
+- Added ``DeviceSettings::LaserPosition`` class.
+    Enables control of the laser position on connected Swing3D devices using ``DeviceSettings::LaserPosition``.
+
+- Added a ``void*`` parameter to the ``CallBackDisconnect`` function for enhanced callback handling.
+
+
+Studio Fixed Issues
+---------------------
+- Fixed an issue where the Select Sensor dialog did not properly handle the results of the Force IP Send command.
+

@@ -35,7 +35,7 @@ The code to control the laser power using the API is shown below.
 
     swing3d::Device device;
     swing3d::RET_BOOL ret = device.ConnectBySerialNumber("S3XS0007");
-    if (ret.errCode != swing3d::ErrCode::OK)
+    if (ret.errCode != swing3d::ErrCode::SWING3D_OK)
     {
         std::cout << ret.errorMessage << std::endl;
         return 0;
@@ -45,7 +45,7 @@ The code to control the laser power using the API is shown below.
     device.SetDeviceSetting(swing3d::DeviceSettings::LaserPower(3000));
 
     ret = device.Login("user", "1234");
-    if (ret.errCode != swing3d::ErrCode::OK)
+    if (ret.errCode != swing3d::ErrCode::SWING3D_OK)
     {
         std::cout << ret.errorMessage << std::endl;
         return 0;

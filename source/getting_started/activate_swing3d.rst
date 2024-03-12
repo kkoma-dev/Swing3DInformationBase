@@ -30,7 +30,7 @@ To activate your device through the API, you can use the following C++ code snip
 
     swing3d::Device device;
     swing3d::RET_BOOL ret = device.ConnectBySerialNumber("S3XS0007");
-    if (ret.errCode != swing3d::ErrCode::OK)
+    if (ret.errCode != swing3d::ErrCode::SWING3D_OK)
     {
         std::cout << ret.errorMessage << std::endl;
         return 0;
@@ -38,7 +38,7 @@ To activate your device through the API, you can use the following C++ code snip
 
     // Activate swing3d
     ret = device.SetDeviceActivationStatus("user", "1234");
-    if (ret.errCode != swing3d::ErrCode::OK)
+    if (ret.errCode != swing3d::ErrCode::SWING3D_OK)
     {
         std::cout << ret.errorMessage << std::endl;
         return 0;

@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Improvements" href="v1.4.0.html" />
-    <link rel="prev" title="API Fixed Issues" href="v1.4.2.html" /> 
+    <link rel="next" title="API Fixed Issues" href="v1.4.1.html" />
+    <link rel="prev" title="Release Notes" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,13 +55,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../api_flow_chart.html">API Flow Chart</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#v1-4-2">v1.4.2</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#v1-4-1">v1.4.1</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#v1-4-2">v1.4.2</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">API Fixed Issues</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api-new-features">API New Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#studio-improvements">Studio Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#studio-fixed-issues">Studio Fixed Issues</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#v1-4-1">v1.4.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#v1-4-0">v1.4.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#v1-3-0">v1.3.0</a></li>
 </ul>
@@ -95,23 +95,29 @@
   <section id="api-fixed-issues">
 <h1>API Fixed Issues<a class="headerlink" href="#api-fixed-issues" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p>Fixed an issue where the connection failed when multiple network adapters are present.</p></li>
+<li><dl class="simple">
+<dt>Resolved a conflict between winerror.h and the Swing3D API’s ErrorType.</dt><dd><p>To avoid conflicts with <cite>ERROR_DEVICE_NOT_CONNECTED</cite> in winerror.h,
+prefixed all ErrCodes in the Swing3D API with <cite>SWING3D_</cite>.</p>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
 <section id="api-new-features">
 <h1>API New Features<a class="headerlink" href="#api-new-features" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><dl class="simple">
-<dt>Added <code class="docutils literal notranslate"><span class="pre">Reboot()</span></code> function</dt><dd><p>Added the function to reboot Swing3D to software.</p>
+<dt>Added <code class="docutils literal notranslate"><span class="pre">DeviceSettings::LaserPosition</span></code> class.</dt><dd><p>Enables control of the laser position on connected Swing3D devices using <code class="docutils literal notranslate"><span class="pre">DeviceSettings::LaserPosition</span></code>.</p>
 </dd>
 </dl>
 </li>
+<li><p>Added a <code class="docutils literal notranslate"><span class="pre">void*</span></code> parameter to the <code class="docutils literal notranslate"><span class="pre">CallBackDisconnect</span></code> function for enhanced callback handling.</p></li>
 </ul>
 </section>
-<section id="studio-improvements">
-<h1>Studio Improvements<a class="headerlink" href="#studio-improvements" title="Link to this heading"></a></h1>
+<section id="studio-fixed-issues">
+<h1>Studio Fixed Issues<a class="headerlink" href="#studio-fixed-issues" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p>The Firmware Update ProgressBar Dialog has been modified to not close on key events (ESC, Enter) or the Close button during updates.</p></li>
+<li><p>Fixed an issue where the Select Sensor dialog did not properly handle the results of the Force IP Send command.</p></li>
 </ul>
 </section>
 
@@ -119,8 +125,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="v1.4.2.html" class="btn btn-neutral float-left" title="API Fixed Issues" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="v1.4.0.html" class="btn btn-neutral float-right" title="API Improvements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="v1.4.1.html" class="btn btn-neutral float-right" title="API Fixed Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
