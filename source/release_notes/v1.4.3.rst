@@ -1,0 +1,34 @@
+API New Features
+---------------------
+- Added ``Utils::CreateTransformMatrix`` function
+    Creates a ``transformation matrix`` to align a plane defined by three points with the Z-axis.
+
+- Added ``PointCloud::SaveToCSV`` function
+    Allows saving 3D data to a ``.csv`` file.
+
+
+Studio New Features
+---------------------
+- CSV Data Saving
+    Added the ability to save 3D data with a ``.csv`` extension.
+
+- Point Picking Feature
+    Added the point picking feature, allowing users to click on a point in the point cloud to view its coordinates.
+
+- Measure Distance Feature
+    Added a measure distance feature, enabling users to measure the distance between two selected points.
+    After selecting two points, the following information will be displayed in the console:
+
+    - **Distance**: The straight-line distance between the two selected points.
+    - **∆X**: The difference in the X-coordinates of the two points.
+    - **∆Y**: The difference in the Y-coordinates of the two points.
+    - **∆Z**: The difference in the Z-coordinates of the two points.
+    - **∆XY**: The distance difference in the XY plane.
+    - **∆XZ**: The distance difference in the XZ plane.
+    - **∆YZ**: The distance difference in the YZ plane.
+
+- Pick Three Points Feature
+    Added the capability to select three points in the 3D view to perform plane correction.
+
+    This feature allows users to select three points in the 3D view to define a plane, align the point cloud, and verify the ``transformation matrix`` used for this alignment.
+

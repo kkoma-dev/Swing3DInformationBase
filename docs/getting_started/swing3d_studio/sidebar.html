@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swing3D Studio Info &mdash; Swing3D Information Base  documentation</title>
+  <title>Point Picking &mdash; Swing3D Information Base  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=4144355e" />
@@ -23,8 +23,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Connect" href="toolbar.html" />
-    <link rel="prev" title="Auto Capture Settings Dialog" href="menubar_tools.html" /> 
+    <link rel="next" title="Device Info" href="property_toolbox.html" />
+    <link rel="prev" title="2D" href="visualization_tab.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,19 +50,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index_user_guide.html">User Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index_studio_guide.html">Swing3D Studio Guide</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index_studio_guide.html#menubar">MenuBar</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="menubar.html">File</a></li>
-<li class="toctree-l3"><a class="reference internal" href="menubar.html#view">View</a></li>
-<li class="toctree-l3"><a class="reference internal" href="menubar.html#tools">Tools</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="menubar.html#help">Help</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Swing3D Studio Info</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_studio_guide.html#menubar">MenuBar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_studio_guide.html#toolbar">ToolBar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_studio_guide.html#visualization-tab">Visualization Tab</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index_studio_guide.html#sidebar">Sidebar</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_studio_guide.html#sidebar">Sidebar</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Point Picking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measure-distance">Measure Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pick-three-points">Pick Three Points</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../index_studio_guide.html#property-toolbox">Property ToolBox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_studio_guide.html#log-view">Log View</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_studio_guide.html#statusbar">StatusBar</a></li>
@@ -90,8 +86,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index_studio_guide.html">Swing3D Studio Guide</a></li>
-          <li class="breadcrumb-item"><a href="menubar.html">File</a></li>
-      <li class="breadcrumb-item active">Swing3D Studio Info</li>
+      <li class="breadcrumb-item active">Point Picking</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -100,22 +95,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <img alt="../../_images/menubar_help.png" src="../../_images/menubar_help.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<section id="swing3d-studio-info">
-<h1>Swing3D Studio Info<a class="headerlink" href="#swing3d-studio-info" title="Link to this heading"></a></h1>
-<img alt="../../_images/studio_info.png" src="../../_images/studio_info.png" />
-<p>The Swing3D Studio Info Dialog shows the version of the current Studio.</p>
+  <img alt="../../_images/sidebar.png" src="../../_images/sidebar.png" />
+<section id="point-picking">
+<h1>Point Picking<a class="headerlink" href="#point-picking" title="Link to this heading"></a></h1>
+<p>Selecting <strong>Point Picking</strong> allows you to click on a point with the left mouse button to view the coordinates (x, y, z) of that point.</p>
+<img alt="../../_images/point_picking.png" src="../../_images/point_picking.png" />
+</section>
+<section id="measure-distance">
+<h1>Measure Distance<a class="headerlink" href="#measure-distance" title="Link to this heading"></a></h1>
+<p>Selecting <strong>Measure Distance</strong> enables you to choose two points and check the distance between them.</p>
+<img alt="../../_images/measure_distance.png" src="../../_images/measure_distance.png" />
+<p>Once two points are selected, the following information will be displayed in the console:</p>
+<ul class="simple">
+<li><p><strong>Distance</strong>: The straight-line distance between the two selected points.</p></li>
+<li><p><strong>∆X</strong>: The difference in the X-coordinates of the two points.</p></li>
+<li><p><strong>∆Y</strong>: The difference in the Y-coordinates of the two points.</p></li>
+<li><p><strong>∆Z</strong>: The difference in the Z-coordinates of the two points.</p></li>
+<li><p><strong>∆XY</strong>: The distance difference in the XY plane.</p></li>
+<li><p><strong>∆XZ</strong>: The distance difference in the XZ plane.</p></li>
+<li><p><strong>∆YZ</strong>: The distance difference in the YZ plane.</p></li>
+</ul>
+</section>
+<section id="pick-three-points">
+<h1>Pick Three Points<a class="headerlink" href="#pick-three-points" title="Link to this heading"></a></h1>
+<p>Selecting <strong>Pick Three Points</strong> allows you to select three points to perform plane correction.</p>
+<img alt="../../_images/pick_three_points1.png" src="../../_images/pick_three_points1.png" />
+<p>Select three points as shown in the image above.</p>
+<img alt="../../_images/pick_three_points2.png" src="../../_images/pick_three_points2.png" />
+<p>Once three points are selected, the point cloud is calibrated to the plane, and the transformation matrix used during the calibration is output to the console.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="menubar_tools.html" class="btn btn-neutral float-left" title="Auto Capture Settings Dialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="toolbar.html" class="btn btn-neutral float-right" title="Connect" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="visualization_tab.html" class="btn btn-neutral float-left" title="2D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="property_toolbox.html" class="btn btn-neutral float-right" title="Device Info" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

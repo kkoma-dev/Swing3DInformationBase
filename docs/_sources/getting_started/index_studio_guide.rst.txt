@@ -32,6 +32,14 @@ Visualization Tab
 
    swing3d_studio/visualization_tab.rst
 
+Sidebar
+-------------------
+.. image:: swing3d_studio/sidebar.png
+
+.. toctree::
+   :maxdepth: 1
+
+   swing3d_studio/sidebar.rst
 
 Property ToolBox
 --------------------------

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Fixed Issues &mdash; Swing3D Information Base  documentation</title>
+  <title>API New Features &mdash; Swing3D Information Base  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4144355e" />
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Fixed Issues" href="v1.4.1.html" />
-    <link rel="prev" title="API New Features" href="v1.4.3.html" /> 
+    <link rel="next" title="API Fixed Issues" href="v1.4.2.html" />
+    <link rel="prev" title="Release Notes" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,13 +55,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../api_flow_chart.html">API Flow Chart</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Release Notes</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#v1-4-3">v1.4.3</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#v1-4-2">v1.4.2</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">API Fixed Issues</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#api-new-features">API New Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#studio-fixed-issues">Studio Fixed Issues</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#v1-4-3">v1.4.3</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">API New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#studio-new-features">Studio New Features</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#v1-4-2">v1.4.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#v1-4-1">v1.4.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#v1-4-0">v1.4.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#v1-3-0">v1.3.0</a></li>
@@ -84,7 +83,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Release Notes</a></li>
-      <li class="breadcrumb-item active">API Fixed Issues</li>
+      <li class="breadcrumb-item active">API New Features</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -93,32 +92,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="api-fixed-issues">
-<h1>API Fixed Issues<a class="headerlink" href="#api-fixed-issues" title="Link to this heading"></a></h1>
-<ul class="simple">
-<li><dl class="simple">
-<dt>Resolved a conflict between winerror.h and the Swing3D API’s ErrorType.</dt><dd><p>To avoid conflicts with <cite>ERROR_DEVICE_NOT_CONNECTED</cite> in winerror.h,
-prefixed all ErrCodes in the Swing3D API with <cite>SWING3D_</cite>.</p>
-</dd>
-</dl>
-</li>
-</ul>
-</section>
-<section id="api-new-features">
+  <section id="api-new-features">
 <h1>API New Features<a class="headerlink" href="#api-new-features" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><dl class="simple">
-<dt>Added <code class="docutils literal notranslate"><span class="pre">DeviceSettings::LaserPosition</span></code> class.</dt><dd><p>Enables control of the laser position on connected Swing3D devices using <code class="docutils literal notranslate"><span class="pre">DeviceSettings::LaserPosition</span></code>.</p>
+<dt>Added <code class="docutils literal notranslate"><span class="pre">Utils::CreateTransformMatrix</span></code> function</dt><dd><p>Creates a <code class="docutils literal notranslate"><span class="pre">transformation</span> <span class="pre">matrix</span></code> to align a plane defined by three points with the Z-axis.</p>
 </dd>
 </dl>
 </li>
-<li><p>Added a <code class="docutils literal notranslate"><span class="pre">void*</span></code> parameter to the <code class="docutils literal notranslate"><span class="pre">CallBackDisconnect</span></code> function for enhanced callback handling.</p></li>
+<li><dl class="simple">
+<dt>Added <code class="docutils literal notranslate"><span class="pre">PointCloud::SaveToCSV</span></code> function</dt><dd><p>Allows saving 3D data to a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file.</p>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
-<section id="studio-fixed-issues">
-<h1>Studio Fixed Issues<a class="headerlink" href="#studio-fixed-issues" title="Link to this heading"></a></h1>
+<section id="studio-new-features">
+<h1>Studio New Features<a class="headerlink" href="#studio-new-features" title="Link to this heading"></a></h1>
+<ul>
+<li><dl class="simple">
+<dt>CSV Data Saving</dt><dd><p>Added the ability to save 3D data with a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> extension.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Point Picking Feature</dt><dd><p>Added the point picking feature, allowing users to click on a point in the point cloud to view its coordinates.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Measure Distance Feature</dt><dd><p>Added a measure distance feature, enabling users to measure the distance between two selected points.
+After selecting two points, the following information will be displayed in the console:</p>
 <ul class="simple">
-<li><p>Fixed an issue where the Select Sensor dialog did not properly handle the results of the Force IP Send command.</p></li>
+<li><p><strong>Distance</strong>: The straight-line distance between the two selected points.</p></li>
+<li><p><strong>∆X</strong>: The difference in the X-coordinates of the two points.</p></li>
+<li><p><strong>∆Y</strong>: The difference in the Y-coordinates of the two points.</p></li>
+<li><p><strong>∆Z</strong>: The difference in the Z-coordinates of the two points.</p></li>
+<li><p><strong>∆XY</strong>: The distance difference in the XY plane.</p></li>
+<li><p><strong>∆XZ</strong>: The distance difference in the XZ plane.</p></li>
+<li><p><strong>∆YZ</strong>: The distance difference in the YZ plane.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Pick Three Points Feature</dt><dd><p>Added the capability to select three points in the 3D view to perform plane correction.</p>
+<p>This feature allows users to select three points in the 3D view to define a plane, align the point cloud, and verify the <code class="docutils literal notranslate"><span class="pre">transformation</span> <span class="pre">matrix</span></code> used for this alignment.</p>
+</dd>
+</dl>
+</li>
 </ul>
 </section>
 
@@ -126,8 +148,8 @@ prefixed all ErrCodes in the Swing3D API with <cite>SWING3D_</cite>.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="v1.4.3.html" class="btn btn-neutral float-left" title="API New Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="v1.4.1.html" class="btn btn-neutral float-right" title="API Fixed Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="v1.4.2.html" class="btn btn-neutral float-right" title="API Fixed Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

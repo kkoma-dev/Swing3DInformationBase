@@ -1,7 +1,5 @@
 .. image:: toolbar.png
 
-|
-
 
 Connect
 ---------------------
