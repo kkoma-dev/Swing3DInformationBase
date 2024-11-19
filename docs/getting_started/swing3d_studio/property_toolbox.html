@@ -224,7 +224,7 @@
 </section>
 <section id="d-settings">
 <h1>3D Settings<a class="headerlink" href="#d-settings" title="Link to this heading"></a></h1>
-<p>The 3D Settings Toolbox lets you adjust settings for 3D views in Studio.</p>
+<p>The 3D Settings Toolbox lets you adjust various settings related to 3D in Studio.</p>
 <img alt="../../_images/3d_settings.png" src="../../_images/3d_settings.png" />
 <p>Access the following features in the 3D Settings Toolbox:</p>
 <table class="docutils align-default">
@@ -250,11 +250,20 @@
 <tr class="row-odd"><td><p>Max Z-Depth</p></td>
 <td><p>Establishes a maximum Z-Depth for the point cloud. Deletes points above this threshold. Active when Auto Z-Depth is False.</p></td>
 </tr>
-<tr class="row-even"><td><p>Point Picking</p></td>
-<td><p>Enables output of the closest point’s coordinates when clicking on a Point Cloud in 3D View. (True/False)</p></td>
-</tr>
 </tbody>
 </table>
+<p><strong>Transform Matrix</strong></p>
+<p>Allows you to set and save a custom 4x4 transformation matrix for aligning the 3D point cloud data. This matrix is used to adjust the orientation and position of the point cloud to fit specific requirements or align with a reference plane.</p>
+<ul class="simple">
+<li><p><strong>LOAD</strong>: Loads the transformation matrix stored on the device.</p></li>
+<li><p><strong>SAVE</strong>: Saves the transformation matrix settings to the device for future use. After saving, you may need to reset the Output Mode to apply the changes.</p></li>
+<li><p><strong>Quick Input</strong>: The thunder icon button next to the Transform Matrix label opens a dialog where you can quickly enter the 4x4 matrix values. This dialog allows for easier input and editing of the matrix values, making it more convenient to make adjustments or enter custom values.</p></li>
+</ul>
+<img alt="../../_images/transform_matrix_dialog.png" src="../../_images/transform_matrix_dialog.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The transformation matrix can be used to precisely align the point cloud with the Z-axis or other desired orientations by defining specific rotation, scaling, or translation parameters.</p>
+</div>
 </section>
 
 

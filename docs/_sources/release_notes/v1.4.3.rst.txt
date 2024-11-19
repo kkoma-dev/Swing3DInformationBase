@@ -4,8 +4,13 @@ API New Features
     Creates a ``transformation matrix`` to align a plane defined by three points with the Z-axis.
 
 - Added ``PointCloud::SaveToCSV`` function
-    Allows saving 3D data to a ``.csv`` file.
+    Saves 3D data to a ``.csv`` file.
 
+- Added ``GetTransformMatrix`` function
+    Gets the transformation matrix stored on the device.
+
+- Added ``SaveTransformMatrix`` function
+    Saves a transformation matrix to the device.
 
 Studio New Features
 ---------------------
@@ -31,4 +36,9 @@ Studio New Features
     Added the capability to select three points in the 3D view to perform plane correction.
 
     This feature allows users to select three points in the 3D view to define a plane, align the point cloud, and verify the ``transformation matrix`` used for this alignment.
+
+- Transformation Matrix Management
+    Added support for the ``GetTransformMatrix`` and ``SaveTransformMatrix`` API functions in the Studio GUI.
+    Users can now retrieve and save transformation matrices directly from the Studio, allowing for easy configuration and alignment adjustments.
+    After saving a transformation matrix, users are prompted to reset the Output Mode to apply the changes.
 

@@ -74,7 +74,7 @@ Persistent Default Gateway      The persistent default gateway of the device.
 
 3D Settings
 --------------------------------------------
-The 3D Settings Toolbox lets you adjust settings for 3D views in Studio.
+The 3D Settings Toolbox lets you adjust various settings related to 3D in Studio.
 
 .. image:: 3d_settings.png
 
@@ -94,6 +94,18 @@ Access the following features in the 3D Settings Toolbox:
      - Sets a minimum Z-Depth for the point cloud. Deletes points below this threshold. Active when Auto Z-Depth is False.
    * - Max Z-Depth
      - Establishes a maximum Z-Depth for the point cloud. Deletes points above this threshold. Active when Auto Z-Depth is False.
-   * - Point Picking
-     - Enables output of the closest point's coordinates when clicking on a Point Cloud in 3D View. (True/False)
+
+**Transform Matrix**
+
+Allows you to set and save a custom 4x4 transformation matrix for aligning the 3D point cloud data. This matrix is used to adjust the orientation and position of the point cloud to fit specific requirements or align with a reference plane.
+
+- **LOAD**: Loads the transformation matrix stored on the device.
+- **SAVE**: Saves the transformation matrix settings to the device for future use. After saving, you may need to reset the Output Mode to apply the changes.
+- **Quick Input**: The thunder icon button next to the Transform Matrix label opens a dialog where you can quickly enter the 4x4 matrix values. This dialog allows for easier input and editing of the matrix values, making it more convenient to make adjustments or enter custom values.
+
+.. image:: transform_matrix_dialog.png
+
+.. tip::
+    The transformation matrix can be used to precisely align the point cloud with the Z-axis or other desired orientations by defining specific rotation, scaling, or translation parameters.
+
 

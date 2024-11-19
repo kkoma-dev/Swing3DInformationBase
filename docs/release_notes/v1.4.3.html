@@ -101,7 +101,17 @@
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Added <code class="docutils literal notranslate"><span class="pre">PointCloud::SaveToCSV</span></code> function</dt><dd><p>Allows saving 3D data to a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file.</p>
+<dt>Added <code class="docutils literal notranslate"><span class="pre">PointCloud::SaveToCSV</span></code> function</dt><dd><p>Saves 3D data to a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Added <code class="docutils literal notranslate"><span class="pre">GetTransformMatrix</span></code> function</dt><dd><p>Gets the transformation matrix stored on the device.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Added <code class="docutils literal notranslate"><span class="pre">SaveTransformMatrix</span></code> function</dt><dd><p>Saves a transformation matrix to the device.</p>
 </dd>
 </dl>
 </li>
@@ -138,6 +148,13 @@ After selecting two points, the following information will be displayed in the c
 <li><dl>
 <dt>Pick Three Points Feature</dt><dd><p>Added the capability to select three points in the 3D view to perform plane correction.</p>
 <p>This feature allows users to select three points in the 3D view to define a plane, align the point cloud, and verify the <code class="docutils literal notranslate"><span class="pre">transformation</span> <span class="pre">matrix</span></code> used for this alignment.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Transformation Matrix Management</dt><dd><p>Added support for the <code class="docutils literal notranslate"><span class="pre">GetTransformMatrix</span></code> and <code class="docutils literal notranslate"><span class="pre">SaveTransformMatrix</span></code> API functions in the Studio GUI.
+Users can now retrieve and save transformation matrices directly from the Studio, allowing for easy configuration and alignment adjustments.
+After saving a transformation matrix, users are prompted to reset the Output Mode to apply the changes.</p>
 </dd>
 </dl>
 </li>
